@@ -440,6 +440,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: test_player
       objectReference: {fileID: 0}
+    - target: {fileID: 8976042579878460787, guid: c3219414f78f3a947bb751eef7be01dd, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 4385080171363236904}
+    - target: {fileID: 8976042579878460787, guid: c3219414f78f3a947bb751eef7be01dd, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 4618960582196107421, guid: dfc2f8b8726ad954d9cc5443920fe478, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
