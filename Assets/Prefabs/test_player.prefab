@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 3038216865462386930}
   - component: {fileID: 8976042579878460787}
   - component: {fileID: 6907938402536206577}
+  - component: {fileID: 3190587502503698908}
   m_Layer: 0
   m_Name: test_player
   m_TagString: Untagged
@@ -139,7 +140,7 @@ Transform:
   - {fileID: 6406401587550646168}
   - {fileID: 499200414317237674}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &3038216865462386930
 LODGroup:
@@ -177,6 +178,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  projectilePrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  shootForce: 10
+  despawnDelay: 3
 --- !u!54 &6907938402536206577
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -202,8 +207,24 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3190587502503698908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577328070696627621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841e4d5a4ed63bf46a23b2870e559821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  attackPower: 10
+  defensePower: 5
 --- !u!1 &6074891454904302538
 GameObject:
   m_ObjectHideFlags: 0
