@@ -23,6 +23,14 @@ public class PlayerController : MonoBehaviour
         {
             Shoot();
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            movementSpeed *= 2f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            movementSpeed /= 2f;
+        }
     }
 
     private void FixedUpdate()
