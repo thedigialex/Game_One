@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     public float shootForce = 10f;
     public float despawnDelay = 3f;
     private Rigidbody rb;
+    private PlayerStats playerStats;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerStats = GetComponent<PlayerStats>();
     }
     private void Update()
     {
@@ -25,11 +27,13 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical) * movementSpeed;
-        rb.velocity = movement;
+        if (playerStats.currentHealth > 0) 
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical) * movementSpeed;
+            rb.velocity = movement;
+        }
     }
     void Shoot()
     {
