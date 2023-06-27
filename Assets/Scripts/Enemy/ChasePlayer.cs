@@ -6,7 +6,7 @@ public class ChasePlayer : MonoBehaviour
 {
     public Transform player;
     public float movementSpeed = 2f;
-    public float detectionRadius = 10f;
+    public float detectionRadius = 2f;
 
     private Rigidbody rb;
 

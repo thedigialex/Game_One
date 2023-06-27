@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public int Points = 0;
     public int maxHealth = 100;
     public int currentHealth;
     public int attackPower = 10;
     public int defensePower = 5;
+    public EventController Event;
 
     void Start()
     {
         currentHealth = maxHealth;
-    }
-    void Update()
-    {
-        
     }
     public void TakeDamage(int damage)
     {
@@ -23,7 +22,6 @@ public class PlayerStats : MonoBehaviour
         if (actualDamage > 0)
         {
             currentHealth -= actualDamage;
-            Debug.Log("Player took " + actualDamage + " damage. Current health: " + currentHealth);
             if (currentHealth <= 0)
             {
                 Die();
@@ -44,6 +42,6 @@ public class PlayerStats : MonoBehaviour
     }
     private void Die()
     {
-        Debug.Log("Player died!");
+        Event.GameOver();
     }
 }
