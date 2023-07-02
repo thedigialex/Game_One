@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movementSpeed = 5f;
     public GameObject projectilePrefab;
     public Transform spawnPoint;
+    public float movementSpeed = 5f;
     public float shootForce = 10f;
     public float despawnDelay = 3f;
     private Rigidbody rb;
