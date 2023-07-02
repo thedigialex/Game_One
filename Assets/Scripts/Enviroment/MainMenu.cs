@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverScreen : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    public void RestartButton() 
+    public void StartButton()
     {
         SceneManager.LoadScene("Test Scene");
     }
-    public void MainMenuButton()
+
+    public void ExitButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
     }
 }

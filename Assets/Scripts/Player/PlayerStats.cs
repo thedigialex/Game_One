@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public UIController UI;
     public int Points = 0;
     public int maxHealth = 100;
     public int currentHealth;
     public int attackPower = 10;
     public int defensePower = 5;
-    public EventController Event;
 
     void Start()
     {
@@ -36,12 +36,12 @@ public class PlayerStats : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            int enemyDamage = 20;
+            int enemyDamage = 100;
             TakeDamage(enemyDamage);
         }
     }
     private void Die()
     {
-        Event.GameOver();
+        UI.GameOver();
     }
 }
